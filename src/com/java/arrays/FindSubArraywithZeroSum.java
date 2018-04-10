@@ -8,7 +8,7 @@ public class FindSubArraywithZeroSum {
 		
 		
 		
-		int arr[] = {1, 4, -2, -2, 5, -4, 3};
+		 int arr[] = {1, 4, -2, -2, 5, -4, 3};
 		
 	      /*int arr[] = {-3, 2, 3, 1, 6};*/
 		

@@ -9,16 +9,16 @@ five solutions: {2,2,2,2,2}, {2,2,3,3}, {2,2,6}, {2,3,5} and {5,5}. So the outpu
 public class CoinChange {
 
 	public static void main(String args[]) {
-		System.out.println(Change(4, new int[] { 1, 2, 3 }));
+		System.out.println(Change(4, new int[] { 1,2,3 }));
 	}
 
 	public static int Change(int amount, int[] arr) {
 		int combination[] = new int[amount + 1];
 		combination[0] = 1;
 		for (int coin : arr) {
-			for (int j = 0; j < combination.length; j++) {
-				if (j >= coin)
-					combination[j] += combination[j - coin];
+			for (int currentamount = 1; currentamount < combination.length; currentamount++) {
+				/*if (currentamount >= coin)*/
+					combination[currentamount] += combination[currentamount - coin];
 				printAmount(combination);
 			}		
 		}

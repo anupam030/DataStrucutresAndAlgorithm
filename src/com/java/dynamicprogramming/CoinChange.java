@@ -16,8 +16,8 @@ public class CoinChange {
 		int combination[] = new int[amount + 1];
 		combination[0] = 1;
 		for (int coin : arr) {
-			for (int currentamount = 1; currentamount < combination.length; currentamount++) {
-				/*if (currentamount >= coin)*/
+			for (int currentamount = 0; currentamount < combination.length; currentamount++) {
+				if (currentamount >= coin)
 					combination[currentamount] += combination[currentamount - coin];
 				printAmount(combination);
 			}		

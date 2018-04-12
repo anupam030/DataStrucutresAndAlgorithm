@@ -23,7 +23,6 @@ public class BoundaryTraversalofBinaryTree {
 				System.out.print(root.data + " ");
 				printRightViewwithoutLeaf(root.rightchild);
 			}
-
 			// do nothing if its a leaf node
 			// this way we avoid duplicates
 		}
@@ -32,9 +31,7 @@ public class BoundaryTraversalofBinaryTree {
 	public void printLeafNodes(Node root) {
 		if (root == null)
 			return;
-
 		printLeafNodes(root.leftchild);
-
 		if (root.leftchild == null && root.rightchild == null)
 			System.out.print(root.data + " ");
 		printLeafNodes(root.rightchild);
@@ -51,7 +48,6 @@ public class BoundaryTraversalofBinaryTree {
 				printRightViewwithoutLeaf(root.leftchild);
 				System.out.print(root.data + " ");
 			}
-
 			// do nothing if its a leaf node
 			// this way we avoid duplicates
 		}

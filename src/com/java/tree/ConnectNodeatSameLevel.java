@@ -58,6 +58,10 @@ public class ConnectNodeatSameLevel {
 		RightViewofBinarytree rvb = new RightViewofBinarytree();
 		rvb.RightView(node, 1);
 		System.out.println();
+		System.out.println("Boundary traversal will be");
+		BoundaryTraversalofBinaryTree btb = new BoundaryTraversalofBinaryTree();
+		btb.printBoundaryTraversal(node);
+		System.out.println();
 		System.out.println("Mirror tree will be");
 		MirrorTree mt = new MirrorTree();
 		mt.MirrorTree(node);

@@ -37,19 +37,18 @@ public class BoundaryTraversalofBinaryTree {
 
 		if (root.leftchild == null && root.rightchild == null)
 			System.out.print(root.data + " ");
-
 		printLeafNodes(root.rightchild);
 	}
 
 	public void printRightViewwithoutLeaf(Node root) {
 		if (root != null) {
-			if (root.leftchild != null) {
+			if (root.rightchild != null) {
+				printRightViewwithoutLeaf(root.rightchild);
+				System.out.print(root.data + " ");
+			} else if (root.leftchild != null) {
 				// to ensure bottom up order, print the node
 				// after calling itself for left subtree
 				printRightViewwithoutLeaf(root.leftchild);
-				System.out.print(root.data + " ");
-			} else if (root.rightchild != null) {
-				printRightViewwithoutLeaf(root.rightchild);
 				System.out.print(root.data + " ");
 			}
 
@@ -60,12 +59,11 @@ public class BoundaryTraversalofBinaryTree {
 	}
 
 	public void printBoundaryTraversal(Node root) {
-        
-		if(root!= null) {
+
+		if (root != null) {
 			System.out.print(root.data + " ");
 			printLeftViewwithoutLeaf(root.leftchild);
-			printBoundaryTraversal(root.leftchild);
-			printBoundaryTraversal(root.rightchild);
+			printLeafNodes(root);
 			printRightViewwithoutLeaf(root.rightchild);
 		}
 	}

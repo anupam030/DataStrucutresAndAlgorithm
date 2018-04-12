@@ -62,6 +62,14 @@ public class ConnectNodeatSameLevel {
 		BoundaryTraversalofBinaryTree btb = new BoundaryTraversalofBinaryTree();
 		btb.printBoundaryTraversal(node);
 		System.out.println();
+		System.out.println("Preorder will be");
+		PreorderTraversal po = new PreorderTraversal();
+		po.preOrder(node);
+		System.out.println();
+		System.out.println("Inorder will be");
+		InorderTraversal io = new InorderTraversal();
+		io.inorder(node);
+		System.out.println();
 		System.out.println("Mirror tree will be");
 		MirrorTree mt = new MirrorTree();
 		mt.MirrorTree(node);

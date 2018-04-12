@@ -41,11 +41,17 @@ public class ConnectNodeatSameLevel {
 		BinaryTreeCreate btc = new BinaryTreeCreate();
 		Node node = btc.createBinaryTree(arr);
 		BinaryTreeLevelOrderTraversal btl = new BinaryTreeLevelOrderTraversal();
-		// btl.printLevelorderTraversal(node);
+		btl.printLevelorderTraversal(node);
+		System.out.println("Top view will be");
+		TopViewofBinaryTree tvb = new TopViewofBinaryTree();
+		tvb.TopView(node);
+		System.out.println("Mirror tree will be");
+		MirrorTree mt = new MirrorTree();
+		mt.MirrorTree(node);
+		btl.printLevelorderTraversal(node);
 		ConnectNodeatSameLevel connectNodeatSameLevel = new ConnectNodeatSameLevel();
 		NodeConnect root = convertFromNodetoNodeConnect(node);
 		connectNodeatSameLevel.ConnectNode(root);
-
 	}
 
 	private static NodeConnect convertFromNodetoNodeConnect(Node node) {

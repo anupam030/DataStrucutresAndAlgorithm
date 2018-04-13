@@ -62,6 +62,10 @@ public class ConnectNodeatSameLevel {
 		BoundaryTraversalofBinaryTree btb = new BoundaryTraversalofBinaryTree();
 		btb.printBoundaryTraversal(node);
 		System.out.println();
+		System.out.println("Zig zag traversal will be");
+		BinaryTreeZigZagTraversal btzzt = new BinaryTreeZigZagTraversal();
+		btzzt.printzigzagorderTraversal(node);
+		System.out.println();
 		System.out.println("Preorder will be");
 		PreorderTraversal prot = new PreorderTraversal();
 		prot.preOrder(node);

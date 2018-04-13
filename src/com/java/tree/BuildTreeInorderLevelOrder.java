@@ -15,34 +15,57 @@ public class BuildTreeInorderLevelOrder {
 	
 	public static Node buildTree(int[] inorder,int[] levelorder,int inStart,int inEnd){
 		
-		if(inStart>inEnd)
-			return null;
-		
-		boolean found = false;
 		Node startNode = null;
-		int inindex=0;
-		
-		if (inStart == inEnd)
-            return new Node(inorder[inStart]);
-		
-		for(int i=0;i<levelorder.length-1;i++) {
-			int data=levelorder[i];
-			for (int j= inStart;j<inEnd;j++) {
-				if(data == inorder[j]) {
-					found = true;
-					inindex=j;
-					startNode= new Node(data);
-					break;
-				}
-			}
-			if (found)
-				break;			 
-		}
 
-		startNode.leftchild = buildTree(inorder,levelorder,inStart,inindex);
-		startNode.rightchild = buildTree(inorder,levelorder,inindex+1,inEnd);
+		if(inStart>inEnd)
+			return startNode;
+		
+		int rootvalue=levelorder[0];
+		startNode = new Node(rootvalue);
+		
+		if (inStart == inEnd) {
+			return startNode;
+		}
+ 
+		int inindex = findrootindex(inorder, rootvalue, inStart, inEnd);
+       
+		int[] leftlevelorder =newlevelorder(inorder,levelorder,inStart, inindex-1);
+	    int[] rightlevelorder = newlevelorder(inorder,levelorder,inindex+1, inEnd);
+
+		startNode.leftchild = buildTree(inorder,leftlevelorder,inStart,inindex-1);
+		startNode.rightchild = buildTree(inorder,rightlevelorder,inindex+1,inEnd);
 		
 		return startNode;
 		
+	}
+	
+	
+	 /* UTILITY FUNCTIONS */
+    
+    private static int[] newlevelorder(int[] inorder, int[] levelorder, int inStart, int inEnd) {
+
+    	int [] newlevelorder = new int[inEnd-inStart+1];
+    	int x=0;
+    	for (int i=0;i<levelorder.length;i++) {
+             if(findrootindex(inorder, levelorder[i],inStart, inEnd) !=-1) {
+            	 newlevelorder[x]=levelorder[i];
+            	 x++;
+             }
+    	}
+    		
+		return newlevelorder;
+	}
+
+
+	/* Function to find index of value in arr[start...end]
+     The function assumes that value is present in in[] */
+	private static int findrootindex(int[] inorder, int data,int inStrt,int inEnd) {
+		int x =-1;
+        for (int i = inStrt; i <= inEnd; i++) 
+        {
+            if (inorder[i] == data)
+                 x=i;
+        }
+        return x;
 	}
 }

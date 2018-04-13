@@ -80,7 +80,10 @@ public class ConnectNodeatSameLevel {
 		System.out.println();
 		System.out.println("Serialized string will be");
 		SerializeDeserializeBinaryTree sdB=new SerializeDeserializeBinaryTree();
-		sdB.serialize(node);
+		String serializedtreeString=sdB.serialize(node);
+		System.out.println("Deserialized tree will be");
+		Node deserializednode=sdB.deserialize(serializedtreeString);
+		btl.printLevelorderTraversal(deserializednode);
 		System.out.println("Mirror tree will be");
 		MirrorTree mt = new MirrorTree();
 		mt.MirrorTree(node);

@@ -78,6 +78,9 @@ public class ConnectNodeatSameLevel {
 		PostOrderTraversal poot = new PostOrderTraversal();
 		poot.postOrder(node);
 		System.out.println();
+		System.out.println("Serialized string will be");
+		SerializeDeserializeBinaryTree sdB=new SerializeDeserializeBinaryTree();
+		sdB.serialize(node);
 		System.out.println("Mirror tree will be");
 		MirrorTree mt = new MirrorTree();
 		mt.MirrorTree(node);

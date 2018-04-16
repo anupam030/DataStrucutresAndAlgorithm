@@ -3,7 +3,7 @@ package com.java.dynamicprogramming;
 public class LongestPalindromeStringBF {
 
 	public static void main(String args[]) {
-		longestPalindromeString("alevelbcgeeksfskeeg");
+		longestPalindromeString("alevlbcgeksfg");
 	}
 
 	public static void longestPalindromeString(String string) {

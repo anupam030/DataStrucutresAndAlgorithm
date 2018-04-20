@@ -10,14 +10,14 @@ public class LongestCommonSubsequences {
 		LongestCommonSubsequences lcs = new LongestCommonSubsequences();
 		Scanner sc = new Scanner (System.in);
 		
-		char[] x= sc.next().toCharArray();
-		char[] y= sc.next().toCharArray();
+		/*char[] x= sc.next().toCharArray();
+		char[] y= sc.next().toCharArray();*/
 		
-/*		String s1 = "AGGTAB";
+		String s1 = "AGGTAB";
 	    String s2 = "GXTXAYB";
 	    
 		char[] x= s1.toCharArray();
-		char[] y= s2.toCharArray();*/
+		char[] y= s2.toCharArray();
 		
 		System.out.println("The lcs of the given two strings is "+lcs.lcs(x,y,x.length,y.length));
 		

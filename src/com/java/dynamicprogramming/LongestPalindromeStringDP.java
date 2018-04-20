@@ -17,8 +17,8 @@ public class LongestPalindromeStringDP {
 
 		boolean table[][] = new boolean[charArray.length - 1][charArray.length - 1];
 
-		for (i = 0; i < charArray.length - 1; i++) {
-			for (j = i; j < charArray.length - 1; j++) {
+		for (i = 0; i <= charArray.length - 1; i++) {
+			for (j = charArray.length-1; j >=0; j--) {
 				if(i==j) {
 					table[i][j] = true;
 				} else if ((j==i+1) && (charArray[i]==charArray[j])) {

@@ -1,6 +1,6 @@
-package com.java.matrices;
+package com.java.matrix;
 
-public class MatriceSpiralForm {
+public class MatrixSpiralForm {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

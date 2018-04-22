@@ -1,6 +1,6 @@
-package com.java.matrices;
+package com.java.matrix;
 
-public class Matricmultiplication {
+public class Matrixmultiplication {
 	
 	public static void main(String args[]) {
 		int a[][]={{1,2,3},{4,5,6}}; // sample 2x3 matrix 

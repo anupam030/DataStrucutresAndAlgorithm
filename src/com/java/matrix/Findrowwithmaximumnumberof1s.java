@@ -1,4 +1,4 @@
-package com.java.matrices;
+package com.java.matrix;
 
 public class Findrowwithmaximumnumberof1s {
 

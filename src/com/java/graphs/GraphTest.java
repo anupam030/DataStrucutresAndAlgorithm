@@ -19,5 +19,11 @@ public class GraphTest {
         // print the adjacency list representation of 
         // the above graph
         graph.printGraph();
+        
+        /*GraphDFS graphDFS = new GraphDFS();
+        graphDFS.printDFS(graph);*/
+        
+        GraphBFS graphBFS = new GraphBFS();
+        graphBFS.BFS(graph,2);
     }
 }

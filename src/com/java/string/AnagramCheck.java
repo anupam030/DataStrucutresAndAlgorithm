@@ -17,8 +17,7 @@ public class AnagramCheck {
 		for(char c : chars)
 		{ 
 			int index = anagram.indexOf(c); 
-			if(index 
-					!= -1){ 
+			if(index != -1){ 
 				anagram = anagram.substring(0,index) + anagram.substring(index +1, anagram.length()); }
 			else{ return false; 
 			} 
@@ -41,7 +40,8 @@ public class AnagramCheck {
 		char[] characters = first.toCharArray(); 
 		StringBuilder sbSecond = new StringBuilder(second); 
 		for(char ch : characters) {
-			int index = sbSecond.indexOf("" + ch); if(index != -1){
+			int index = sbSecond.indexOf("" + ch); 
+			if(index != -1){
 				sbSecond.deleteCharAt(index); 
 			} else { 
 				return false; 

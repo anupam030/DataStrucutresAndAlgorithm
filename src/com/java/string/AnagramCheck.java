@@ -30,8 +30,8 @@ public class AnagramCheck {
 	 * and anagram are not null and lowercase * @return true, if both Strings are anagram. */
 
 	public static boolean iAnagram(String word, String anagram){
-		char[] charFromWord = word.toCharArray(); char[] 
-				charFromAnagram = anagram.toCharArray(); 
+		char[] charFromWord = word.toCharArray(); 
+		char[] charFromAnagram = anagram.toCharArray(); 
 		Arrays.sort(charFromWord);
 		Arrays.sort(charFromAnagram);
 		return Arrays.equals(charFromWord, charFromAnagram); } 

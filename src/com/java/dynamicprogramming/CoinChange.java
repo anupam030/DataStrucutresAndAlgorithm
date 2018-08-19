@@ -20,6 +20,27 @@ five solutions: {2,2,2,2,2}, {2,2,3,3}, {2,2,6}, {2,3,5} and {5,5}. So the outpu
 4.Now As per the Approach we will make the state by referring to recursive algorithm.Amount will refer to a state.For every amount 
 the given solution will be to include the coin(Here we will iterate the coin from coin array) in the solution and to not include the 
 coin in the solution as per the recursive algorithm.
+5.What is happening here is for every amount we are first building the solution with single coin.After that we are adding the other coin
+which will add the solution in the previously computed solution from the previously iterated coin.
+
+1 0 0 0 0 - Amount 0 - coin 1
+1 1 0 0 0 - Amount 1 - coin 1
+1 1 1 0 0 - Amount 2 - coin 1
+1 1 1 1 0 - Amount 3 - coin 1 
+1 1 1 1 1 - Amount 4 - coin 1 
+1 1 1 1 1 - Amount 0 - coin 2   
+1 1 1 1 1 - Amount 1 - coin 2  
+1 1 2 1 1 - Amount 2 - coin 2  
+1 1 2 2 1 - Amount 3 - coin 2  
+1 1 2 2 3 - Amount 4 - coin 2  
+1 1 2 2 3 - Amount 0 - coin 3  
+1 1 2 2 3 - Amount 1 - coin 3  
+1 1 2 2 3 - Amount 2 - coin 3  
+1 1 2 3 3 - Amount 3 - coin 3  
+1 1 2 3 4 - Amount 4 - coin 3  
+4
+
+
 */
 
 public class CoinChange {

@@ -23,6 +23,29 @@ coin in the solution as per the recursive algorithm.
 5.What is happening here is for every amount we are first building the solution with single coin.After that we are adding the other coin
 which will add the solution in the previously computed solution from the previously iterated coin.
 
+
+                            C({1,2,3}, 4) 
+                           /             \    
+                         /                 \                  
+             C({1,2,3}, 1)                 C({1,2}, 4)
+            /       \                      /       \         
+           /         \                    /         \   
+C({1,2,3}, -2)  C({1,2}, 1)        C({1,2}, 2)       C({1}, 4)
+               /    \             /     \              /     \
+             /       \           /       \            /       \
+    C({1},-1)  C({1},1)     C({1,2},0) C({1},2)       C({1}, 3)C({}, 4)
+                   / \        / \        / \              /   \         
+                  /   \      /   \      /   \            /     \  
+          C({1},0) C({},1)   .    .  C({1},1)C({},2) C({1},2) C({}, 3)
+                                       / \              / \ 
+                                      /   \            /   \   
+                                C({1}, 0) C({},1) C({1},1) C({}, 2)
+                                                      / \ 
+                                                     /   \ 
+                                                C({1}, 0) C({}, 1)
+                                                
+All the trees ending with 0 denotes the solution.                                               
+                                                
 1 0 0 0 0 - Amount 0 - coin 1 - solution ( One solution i.e. no coin should be utilized .it will be the base case)
 1 1 0 0 0 - Amount 1 - coin 1 - solution ({1}) 
 1 1 1 0 0 - Amount 2 - coin 1 - solution ({1,1}) 

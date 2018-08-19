@@ -44,7 +44,8 @@ C({1,2,3}, -2)  C({1,2}, 1)        C({1,2}, 2)       C({1}, 4)
                                                      /   \ 
                                                 C({1}, 0) C({}, 1)
                                                 
-All the trees ending with 0 denotes the solution.                                               
+All the trees ending with 0 denotes the solution.   
+We are also able to find overlapping subproblem( C({1},2) called two times) so that we can conclude Optimal substructure exist in this scenario.                                            
                                                 
 1 0 0 0 0 - Amount 0 - coin 1 - solution ( One solution i.e. no coin should be utilized .it will be the base case)
 1 1 0 0 0 - Amount 1 - coin 1 - solution ({1}) 

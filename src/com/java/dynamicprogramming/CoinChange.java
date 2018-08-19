@@ -6,6 +6,22 @@ The order of coins doesn’t matter.
 For example, for N = 4 and S = {1,2,3}, there are four solutions: {1,1,1,1},{1,1,2},{2,2},{1,3}. So output should be 4. For N = 10 and S = {2, 5, 3, 6}, there are 
 five solutions: {2,2,2,2,2}, {2,2,3,3}, {2,2,6}, {2,3,5} and {5,5}. So the output should be 5.*/
 
+/*he only way to solve a DP problem is first by breaking it into a recursive problem and then transforming the recursive state into 
+ * DP state.
+ */
+
+
+/*Coin change problem breakdown -
+
+1.Checked the solution from recursive approach.
+2.Overlapping problem exist.Therefore,will apply dynamic programming approach.
+3.Take the combination array till the amount.Given amount here is 4 so we will take array which will store values possible with these given 
+  coin till 4.We will also consider a base case of 0 when amount is 0.So total length of the array will be 5.Amount 0,1,2,3,4 will be covered.
+4.Now As per the Approach we will make the state by referring to recursive algorithm.Amount will refer to a state.For every amount 
+the given solution will be to include the coin(Here we will iterate the coin from coin array) in the solution and to not include the 
+coin in the solution as per the recursive algorithm.
+*/
+
 public class CoinChange {
 
 	public static void main(String args[]) {

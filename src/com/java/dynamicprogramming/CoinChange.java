@@ -23,24 +23,22 @@ coin in the solution as per the recursive algorithm.
 5.What is happening here is for every amount we are first building the solution with single coin.After that we are adding the other coin
 which will add the solution in the previously computed solution from the previously iterated coin.
 
-1 0 0 0 0 - Amount 0 - coin 1
-1 1 0 0 0 - Amount 1 - coin 1
-1 1 1 0 0 - Amount 2 - coin 1
-1 1 1 1 0 - Amount 3 - coin 1 
-1 1 1 1 1 - Amount 4 - coin 1 
-1 1 1 1 1 - Amount 0 - coin 2   
-1 1 1 1 1 - Amount 1 - coin 2  
-1 1 2 1 1 - Amount 2 - coin 2  
-1 1 2 2 1 - Amount 3 - coin 2  
-1 1 2 2 3 - Amount 4 - coin 2  
-1 1 2 2 3 - Amount 0 - coin 3  
-1 1 2 2 3 - Amount 1 - coin 3  
-1 1 2 2 3 - Amount 2 - coin 3  
-1 1 2 3 3 - Amount 3 - coin 3  
-1 1 2 3 4 - Amount 4 - coin 3  
+1 0 0 0 0 - Amount 0 - coin 1 - solution ( One solution i.e. no coin should be utilized .it will be the base case)
+1 1 0 0 0 - Amount 1 - coin 1 - solution ({1}) 
+1 1 1 0 0 - Amount 2 - coin 1 - solution ({1,1}) 
+1 1 1 1 0 - Amount 3 - coin 1 - solution ({1,1,1})  
+1 1 1 1 1 - Amount 4 - coin 1 - solution ({1,1,1,1})  
+1 1 1 1 1 - Amount 0 - coin 2 - solution ( One solution i.e. no coin should be utilized .it will be the base case)
+1 1 1 1 1 - Amount 1 - coin 2 - solution ( No solution as you can not form amount 1 with 2 denomination) 
+1 1 2 1 1 - Amount 2 - coin 2 - solution ({2})   
+1 1 2 2 1 - Amount 3 - coin 2 - solution ({1,2})   
+1 1 2 2 3 - Amount 4 - coin 2 - solution ({1,1,2},{2,2})  
+1 1 2 2 3 - Amount 0 - coin 3 - solution ( One solution i.e. no coin should be utilized .it will be the base case)  
+1 1 2 2 3 - Amount 1 - coin 3 - solution ( No solution as you can not form amount 1 with 3 denomination)   
+1 1 2 2 3 - Amount 2 - coin 3 - solution ( No solution as you can not form amount 2 with 3 denomination)   
+1 1 2 3 3 - Amount 3 - coin 3 - solution ({3})   
+1 1 2 3 4 - Amount 4 - coin 3 - solution ({1,3})   
 4
-
-
 */
 
 public class CoinChange {

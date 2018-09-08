@@ -73,11 +73,11 @@ public class CoinChange {
 
 	public static int Change(int amount, int[] arr) {
 		int combination[] = new int[amount + 1];//Base case when amount will be zero will alos be  taken thats why amount+1
-		combination[0] = 1;
+		combination[0] = 1;// when amount is zero one solution exist i.e. no coin need ot be used.Base case and case  C({1,2},0)
 		for (int coin : arr) {
 			for (int currentamount = 0; currentamount < combination.length; currentamount++) {
-				if (currentamount >= coin)
-					combination[currentamount] += combination[currentamount - coin];
+				if (currentamount >= coin) // to avoid cases like C({1,2,3}, -2)
+					combination[currentamount] = combination[currentamount]  + combination[currentamount - coin];
 				printAmount(combination);
 			}		
 		}

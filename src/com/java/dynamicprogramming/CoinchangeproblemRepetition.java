@@ -36,6 +36,7 @@ public class CoinchangeproblemRepetition {
 		        return 0;
 		 
 		  // storing the result and returning
-            return Change(amount,arr,m-1)+Change(amount-arr[m-1],arr,m);	
+            return Change(amount,arr,m-1)/*This refers to m-1 the current amount combination[currentamount]*/
+            		+Change(amount-arr[m-1],arr,m);	 /*This refers to current amount minus coin*/
 	}
 }

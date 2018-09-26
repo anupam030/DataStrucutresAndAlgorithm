@@ -25,7 +25,7 @@ public class ConnectNodeatSameLevel {
 				if (tempNodeConnect.rightChild != null) {
 					queueConnect.add(tempNodeConnect.rightChild);
 				}
-				tempNodeConnect.adjacentPointer = queueConnect.peek();
+				tempNodeConnect.nextPointer = queueConnect.peek();
 			} else {
 				System.out.println();
 				if (!queueConnect.isEmpty())
@@ -110,13 +110,13 @@ class NodeConnect {
 	int data;
 	NodeConnect leftChild;
 	NodeConnect rightChild;
-	NodeConnect adjacentPointer;
+	NodeConnect nextPointer;
 
 	NodeConnect(int data) {
 		this.data = data;
 		this.leftChild = null;
 		this.rightChild = null;
-		this.adjacentPointer = null;
+		this.nextPointer = null;
 	}
 
 	NodeConnect() {
@@ -126,6 +126,6 @@ class NodeConnect {
 		this.data = node.data;
 		this.leftChild = null;
 		this.rightChild = null;
-		this.adjacentPointer = null;
+		this.nextPointer = null;
 	}
 }

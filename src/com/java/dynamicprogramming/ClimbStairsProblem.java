@@ -20,7 +20,7 @@ public class ClimbStairsProblem {
 	
 	public static void main(String arg[]){
 		
-		System.out.println(countWays(4,3));
+		System.out.println(countWays(4,1));
 		
 	}
 	// Java program to count number of ways to reach S't stair when

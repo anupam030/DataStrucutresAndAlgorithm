@@ -4,7 +4,7 @@ public class FindMissingNumberAP {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr[] = {2, 4, 8, 10, 12, 14};
+		int arr[] = {2, 4, 6, 8, 12, 14, 16};
 		System.out.println("The missing element is "+find(arr));
 
 	}
@@ -20,19 +20,20 @@ public class FindMissingNumberAP {
 	}
 
 	public  static int findmissing(int[] arr,int low,int high,int diff) {
+		
+		System.out.println("low "+low + " "+"high "+high);
 
-		if(high<low) {
+		if(high<low || low <0 || high>arr.length-1) {
 			return 0;
 		}
-		
 		int mid =low+(high - low)/2;
-		
-		if(arr[mid+1]!=(arr[mid]+diff))
+				
+		if(mid != arr.length-1 && arr[mid+1]!=(arr[mid]+diff))
 			return (arr[mid]+diff);
-		if(arr[mid-1]!=(arr[mid]-diff))
+		if(mid != 0 &&arr[mid-1]!=(arr[mid]-diff))
 			return (arr[mid]-diff);
 		
-		if(arr[mid]==diff*mid) 
+		if(arr[mid]==diff*(mid+1)) 
 			return findmissing(arr, mid+1, high, diff);
 		return findmissing(arr, low, mid-1, diff);
 		
